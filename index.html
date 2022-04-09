@@ -7,20 +7,24 @@
 	<script type="text/javascript" src="js/zapp.js"></script>
     <script src = "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/x-icon" href="favion.ico">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Monda&family=Rubik+Glitch&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&family=Titillium+Web:ital,wght@0,200;0,600;1,200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/chart.css">
 	
     <link rel="stylesheet" media="screen and (max-width: 480px) and (orientation:portrait)" href="css/mobile.css">
-    <title>SafeConnectX</title>
+    <title>CATBREAD BSC</title>
 	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
   <style>
@@ -28,7 +32,7 @@
 	 margin: 0;
 	 padding: 0;
 	 box-sizing: border-box;
-   cursor: none;
+   
 }
 
 
@@ -66,17 +70,161 @@
  html, body {
     max-width: 100vw;
     font-weight:200;
-    font-family: 'Titillium Web', sans-serif;
+	font-family: 'Monda', sans-serif;
 	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
 }
+
+.containerr{
+
+  /*unplash change the image everytime it reloads*/
+  background:url(http:://unsplash.it/400/400) no-repeat;
+  transform:scale(.75) rotateY(-35deg) rotateX(45deg);
+  transform-style:preserve-3d;
+  box-shadow:20px 20px 20px rgba(0,0,0,.25);
+  position:relative;
+  transition:.4s ease;
+}
+
+.containerr::before{
+  content:'';
+
+  border:5px solid red;
+  position:absolute;
+  transform:translateZ(4rem);
+}
+
+
+.containerr:after{
+  content:'';
+
+  position:absolute;
+  background-color:tomato;
+  transform:translateZ(-4rem);
+}
+
+.containerr:hover{
+  transform:scale(1);
+}
+.all {
+	 display: flex;
+	 perspective: 10px;
+	 transform: perspective(300px) rotateX(20deg);
+	 will-change: perspective;
+	 perspective-origin: center center;
+	 transition: all 0.3s ease-out;
+	 justify-content: center;
+	 transform-style: preserve-3d;
+}
+ .all:hover {
+	 perspective: 1000px;
+	 transition: all 1s ease-in;
+	 transform: perspective(10000px) rotateX(0deg);
+}
+ .all:hover .text {
+	 opacity: 1;
+}
+ .all:hover > div {
+	 opacity: 1;
+	 transition-delay: 0s;
+}
+ .all:hover .explainer {
+	 opacity: 0;
+}
+ .left, .center, .right, .lefter, .righter {
+	 width: 200px;
+	 height: 150px;
+	 transform-style: preserve-3d;
+	 border-radius: 10px;
+	 border: 1px solid #fff;
+	 box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+	 opacity: 0;
+	 transition: all 0.3s ease;
+	 transition-delay: 1s;
+	 position: relative;
+	 background-position: center center;
+	 background-size: contain;
+	 background-repeat: no-repeat;
+	 background-color: #58d;
+	 cursor: pointer;
+	 background-blend-mode: color-burn;
+}
+ .left:hover, .center:hover, .right:hover, .lefter:hover, .righter:hover {
+	 box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+	 background-color: #ccf;
+}
+ .text {
+	 transform: translateY(30px);
+	 opacity: 0;
+	 transition: all 0.3s ease;
+	 bottom: 0;
+	 left: 5px;
+	 position: absolute;
+	 will-change: transform;
+	 font-family: 'Space Mono', monospace;
+	 color: #fff;
+	 text-shadow: 0 0 5px rgba(100, 100, 255, .6);
+}
+ .lefter {
+	 transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+	 background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/organization-512.png);
+}
+ .left {
+	 transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+	 background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/creative_draw-512.png);
+}
+ .center {
+	 opacity: 1;
+	 background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/app_window-512.png);
+}
+ .right {
+	 transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+	 background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/cloud_weather-512.png);
+}
+ .righter {
+	 transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+	 background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/search-512.png);
+}
+ .explainer {
+	 font-weight: 300;
+	 font-size: 2rem;
+	 color: #fff;
+	 transition: all 0.6s ease;
+	 width: 100%;
+	 height: 100%;
+	 background-color: #7e009e;
+	 background-image: radial-gradient(circle at center top, #cce, #33a);
+	 border-radius: 10px;
+	 text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .ref {
+	 background-color: #000;
+	 background-image: linear-gradient(to bottom, #d80, #c00);
+	 border-radius: 3px;
+	 padding: 7px 10px;
+	 position: absolute;
+	 font-size: 16px;
+	 bottom: 10px;
+	 right: 10px;
+	 color: #fff;
+	 text-decoration: none;
+	 text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+}
+ .ref::first-letter {
+	 font-size: 12px;
+}
+ 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 65px;
 }
+
 .maine {
   display: flex;
   justify-content: left;
@@ -101,6 +249,8 @@ h1, h2, h3, h4, h5, h6 {
 
  
 }
+
+
 
 .container {
   --rX: 0;
@@ -182,7 +332,9 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 .box-model {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 90%;
   margin: 3%;
   background: rgba(255, 255, 255, 0);
@@ -196,6 +348,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(0, 0, 0);
 }
 .no1 {
+	max-width: 300px;
   background: #a8ff78; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -214,6 +367,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .no2 {
+	max-width: 300px;
   background: #fc466b; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -228,6 +382,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .no3 {
+	max-width: 300px;
   background: #ef32d9; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -242,6 +397,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .no4 {
+	max-width: 300px;
   background: #4776e6; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
@@ -270,13 +426,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   text-align: center;
   word-wrap: break-word;
-  padding: 22px 72px;
+  padding: 22px 12px;
   font-family: monospace;
 }
 
 @media (max-width: 605px) {
   .box img {
-    margin: 60px 40%;
+    margin: 60px;
   }
 }
 
@@ -387,7 +543,7 @@ h1, h2, h3, h4, h5, h6 {
 	 transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	 transition-duration: 400ms;
 	 transform: scale(1.1, 1.1) translate3d(0, 0, 0);
-	 cursor: crosshair;
+	
 }
  .menu-open-button:hover {
 	 transform: scale(1.2, 1.2) translate3d(0, 0, 0);
@@ -415,6 +571,23 @@ h1, h2, h3, h4, h5, h6 {
  .menu-open:checked ~ .menu-item:nth-child(6) {
 	 transition-duration: 1490ms;
 	 transform: translate3d(310px, 0, 0);
+}
+.coolbg  {
+    background: linear-gradient(-45deg,#80179a, #9e067d, #83006b, #a89700);
+    background-size: 1000% 1000%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
  
 .btn {
@@ -479,9 +652,8 @@ ul{
   padding:0;
   display:flex;
   justify-content: end;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7371323529411764) 34%, rgba(0, 0, 0, 0.048) 53%, rgba(0,0,0,0) 80%);
+  background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(4px);
-  border-radius: 10px;
   height: 40px;
 }
 .phone{
@@ -527,7 +699,7 @@ ul:hover li a{
 }
 
 ul li a:hover{
-  transform:scale(1.6);
+  transform:scale(1.2);
   opacity:1;
   filter:blur(0);
   text-decoration:none;
@@ -561,13 +733,13 @@ ul li a:hover:before{
 
   </style>  
   <style>
-        body , h2 {
-          font-family: 'Titillium Web', sans-serif;
+        h1 , h2 {
+			font-family: 'Press Start 2P', cursive;
         }
     </style>
     <style>
         p {
-          font-family: 'Titillium Web', sans-serif;
+		  font-family: 'Space Mono', monospace;
           font-weight: 400;
         }
     </style>
@@ -683,6 +855,16 @@ circle {
   -webkit-animation-name: pie6;
   animation-name: pie6;
 }
+.pie7 {
+  stroke:rgb(44, 9, 183);
+  -webkit-animation-name: pie7;
+  animation-name: pie7;
+}
+.pie8 {
+  stroke:rgb(6, 187, 76);
+  -webkit-animation-name: pie8;
+  animation-name: pie8;
+}
 
 /*
  pie percentage made by stroke-dasharray.
@@ -695,73 +877,89 @@ circle {
 
 /* 1st pie is 40% */
 @-webkit-keyframes pie1 {
-  50%,100% {stroke-dasharray: 20,80,0,0;}
+  50%,100% {stroke-dasharray: 43,57,0,0;}
 }
 @keyframes pie1 {
-  50%,100% {stroke-dasharray: 20,80,0,0;}
+  50%,100% {stroke-dasharray: 43,57,0,0;}
 }
 /* 2nd pie is 30% */
 @-webkit-keyframes pie2 {
-  50%,100% {stroke-dasharray: 0,20,12,68;}
+  50%,100% {stroke-dasharray: 0,43,15,42;}
 }
 @keyframes pie2 {
-  50%,100% {stroke-dasharray: 0,20,12,68;}
+  50%,100% {stroke-dasharray: 0,43,15,42;}
 }
 /* 3rd pie is 30% */
 @-webkit-keyframes pie3 {
-  50%,100% {stroke-dasharray: 0,32,40,28;}
+  50%,100% {stroke-dasharray: 0,58,10,32;}
 }
 @keyframes pie3 {
-  50%,100% {stroke-dasharray: 0,32,40,28;}
+  50%,100% {stroke-dasharray: 0,58,10,32;}
 }
 /* 4th pie is 10% */
 @-webkit-keyframes pie4 {
-  50%,100% {stroke-dasharray: 0,72,12,16;}
+  50%,100% {stroke-dasharray: 0,68,15,17;}
 }
 @keyframes pie4 {
-  50%,100% {stroke-dasharray: 0,72,12,16;}
+  50%,100% {stroke-dasharray: 0,68,15,17;}
 }
 @-webkit-keyframes pie5 {
-  50%,100% {stroke-dasharray: 0,84,4,12;}
+  50%,100% {stroke-dasharray: 0,83,2,15;}
 }
 @keyframes pie5 {
-  50%,100% {stroke-dasharray: 0,84,4,12;}
+  50%,100% {stroke-dasharray:0,83,2,15;}
 }
 @-webkit-keyframes pie6 {
-  50%,100% {stroke-dasharray: 0,88,12,0;}
+  50%,100% {stroke-dasharray: 0,85,3,12;}
 }
 @keyframes pie6 {
-  50%,100% {stroke-dasharray: 0,88,12,0;}
+  50%,100% {stroke-dasharray: 0,85,3,12;}
 }
+@-webkit-keyframes pie7 {
+  50%,100% {stroke-dasharray: 0,88,5,93;}
+}
+@keyframes pie7 {
+  50%,100% {stroke-dasharray: 0,88,5,93;}
+}
+@-webkit-keyframes pie8 {
+  50%,100% {stroke-dasharray: 0,93,7,0;}
+}
+@keyframes pie8 {
+  50%,100% {stroke-dasharray: 0,93,7,0;}
+}
+	</style>
+	<style>
+		.noice {
+	background: linear-gradient(-45deg, #ee765254, #e73c7e5a, #23a5d557, #23d5ab3e);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: auto;
+	backdrop-filter: blur(3px);
+	box-shadow:30px 30px 30px rgba(0, 0, 0, 0.481);
+	border-radius: 10px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 	</style>
   
 </head>
-<body >								<div class="cursor w3-hide-small"></div>
-				<div class="cursor2 w3-hide-small"></div>
-				<div style=" position: fixed; z-index: 1;
-				bottom: 0; background-color: rgba(0, 0, 0, 0.952);
-					backdrop-filter: blur(2px); height:50px;">
-					<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5994,6210,1966,11697" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
-				</div>
-			<section class="w3-hide-small "  style="position: relative; overflow-x: hidden; min-width: 100vw; background-color: #0000007a;">	
-				<video style="z-index: -5000000000000000000000000; position: fixed;" id="background-video" autoplay loop muted poster="img/coolvid.mp4">
-					<source src="img/Circuit - 27725.mp4" type="video/mp4">
-				</video>	
-					<nav class="menu">
-						<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-						<label class="menu-open-button" for="menu-open">
-						<span class="hamburger hamburger-1"></span>
-						<span class="hamburger hamburger-2"></span>
-						<span class="hamburger hamburger-3"></span>
-						</label>
-						
-					
-						<a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
-						<a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
-						<a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
-						
-						
-					</nav>
+<body >					
+		
+			<section style="position: relative; overflow-x: hidden; min-width: 100vw; background-color: #00000000;">	
+				<img style="position: fixed; z-index: -600; 		object-fit: cover;
+				background-attachment: fixed; background-size: 100% 100%;" src="img/cale-bake-hq-2.gif" alt="">	
+	
 					
 					
 					<!-- filters -->
@@ -784,1543 +982,222 @@ circle {
 							</filter>
 						</defs>
 					</svg>
-					<div class="w3-top w3-hide-small" data-aos="fade-down"   data-aos-duration="1000"  style="z-index: 4;">
+					<li style=" position: fixed;
+						margin: 50px 15px 15px 10px;
+						left: 0; z-index: -1;
+						display:inline;"><img src="img/catbread logo test copy hi rez.png" alt="logo" width="200px"  height="160px"></li>
+					<div class="w3-top w3-hide-small coolbg" data-aos="fade-down"   data-aos-duration="1000"  style="z-index: 4;">
 					<ul>
 
 					
-						<li style=" position: fixed;
-						margin: 10px 15px 15px 10px;
-						left: 0;
-						display:inline;"><img src="img/squadw2.png" alt="logo" width="100px" height="100px"></li>
-						<li><a href="#roadmap">Roadmap</a></li>
+						
+						<li><a href="#team">Team</a></li>
 						<li><a href="#tokenomicz">Tokenomics</a></li>
-						<li><a href="#whitepaper">Whitepaper</a></li>
+						<li><a href="#news">News</a></li>
 								
 					
-						<li style="margin-right: 20px;"><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9; "></i></a></li>
-						<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:36px; color: #1DA1F2;"></i></a></li>
-						<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:36px; color: #5865F2; " ></i></a></li>
-						<li><a><button id="connz" style=" font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px; border-color: greenyellow 1px solid;"  > CONNECT</button></a>
-						</li>
-				
-						
-						
-					</ul>
-
-					</div>
-					<div class="w3-top w3-hide-medium w3-hide-large" data-aos="fade-down"   data-aos-duration="1000" >
-						<ul>
-				
-						
-
-						<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:36px; color: #1DA1F2;"></i></a></li>
-						<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:36px; color: #5865F2; " ></i></a></li>
-						<li><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9; margin-right: 20px;"></i></a></li>
-						
-						
-					</ul>
-				
-					</div>
 					
-					<header class="w3-display-container  w3-wide"  style="z-index: 0; ">
-						<video id="background-video" autoplay loop muted poster="img/coolvid.mp4">
-							<source src="img/noice.mp4" type="video/mp4">
+				
+						
+						
+					</ul>
+
+					</div>
+			
+					
+					<header class="w3-display-container  w3-wide"  style="z-index: -2; height: 110vh; ">
+						<div  style="z-index: 0; position: absolute;bottom: 0; left: 0; display: flex; float: left; " >
+							<img width="1500px" height="auto" src="img/oven-2.gif"  alt="">
+
+						</div>
+						
+						<video style="z-index: -2; height: 110vh;" id="background-video" autoplay loop muted poster="img/coolvid.mp4">
+							<source src="img/vidbg.mp4" type="video/mp4">
 						</video>
 					
 						<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 70px;" >
-							<p class="w3-xlarge w3-text-white" data-aos="flip-right" data-aos-duration="1000">WELCOME TO</p>
-						<div class="w3-hide-small" style="background-color: rgba(0, 2, 105, 0.198);
-						backdrop-filter: blur(5px); border-radius: 20px;" data-aos="zoom-in" data-aos-delay="5000" data-aos-duration="1500">
-							<h1 class="w3-jumbo w3-text-white "style="padding: 25px; "><span class=" w3-text-light-grey" data-aos="zoom-in-down" data-aos-delay="1000" data-aos-duration="1000">SafeConnect</span><span class=" w3-black w3-opacity-min w3-padding" data-aos="" data-aos-delay="2500" data-aos-duration="1500"><b>X</b></span> </h1></div>
-						</div>
-						<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 150px;" >
 						
-						<div class="w3-hide-medium w3-hide-large" style="background-color: rgba(0, 0, 0, 0.198);
-						backdrop-filter: blur(5px);" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="2500">
-							<h1 class="w3-xxlarge w3-text-white "style="padding: 25px;"><span class=" w3-text-light-grey" data-aos="zoom-in-down" data-aos-delay="1000" data-aos-duration="1000">SafeConnect</span><span class=" w3-black w3-opacity-min w3-padding" data-aos="" data-aos-delay="2500" data-aos-duration="1500"><b>X</b></span> </h1></div>
+						<div style="color: #000000; " class="w3-hide-small" data-aos="zoom-in" data-aos-delay="5000" data-aos-duration="1500">
+						<img src="img/animated-text-hd-CB.gif" style="max-width: 100vw;" alt="">
 						</div>
-						<div class="w3-padding-32 w3-content w3-display-middle" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500" ;">
-						<div  class="w3-padding-32 w3-content w3-display-middle w3-large w3-center w3-text-white w3-hide-small" style="font-style: italic; background-color: rgba(0, 33, 141, 0.185);
-						backdrop-filter: blur(5px); position: absolute; border-radius: 20px;" >
-							<p class="w3-content" style="width: 700px;">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
-								<br> JOIN US!</p>
-						</div><br><br>
-						</div>
-						<div style="top:0;" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">
-						<div  class="w3-padding-32 w3-display-middle w3-large w3-center w3-text-white w3-hide-medium w3-hide-large " style="margin-top: 550px;font-style: italic; background-color: rgba(255, 255, 255, 0.185);
-						backdrop-filter: blur(5px); border-radius: 20px;" >
-							<p data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
-								<br> JOIN US!</p>
-						</div><br><br>
-						</div>
+						<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 15px;" >
+						
+						<div class="w3-hide-medium w3-hide-large" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="2500" style="max-width: 100vw;">
+						<img style="max-width: 80vw;" src="img/animated-text-hd-CB.gif" alt="">
 
-
-						
-					<div class="w3-display-middle w3-hide-small w3-hide medium w3-hide-large" style="z-index: 3; color: #FFF; display: flex; margin-bottom: 70px;   margin-top: 230px;">
-						
-						
-						<button id="mintoza" style="margin-right: 50 px; font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px;" > MINT NFT </button>
-					
-					</div>
-					<div class="w3-display-topleft w3-hide-small w3-hide-large w3-hide-medium"  style="z-index: 14; color: #FFF; position: fixed; margin-top: 10px;" >  <p>WALLET - <span id="wallet-address" ></span></p></div>
-					
-						<script type="text/javascript">
-							var account = null;
-							var contract = null;
-						
-					
-							const ABI = [
-					{
-						"inputs": [
-							{
-								"internalType": "string",
-								"name": "_name",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "_symbol",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "_initBaseURI",
-								"type": "string"
-							}
-						],
-						"stateMutability": "nonpayable",
-						"type": "constructor"
-					},
-					{
-						"anonymous": false,
-						"inputs": [
-							{
-								"indexed": true,
-								"internalType": "address",
-								"name": "owner",
-								"type": "address"
-							},
-							{
-								"indexed": true,
-								"internalType": "address",
-								"name": "approved",
-								"type": "address"
-							},
-							{
-								"indexed": true,
-								"internalType": "uint256",
-								"name": "tokenId",
-								"type": "uint256"
-							}
-						],
-						"name": "Approval",
-						"type": "event"
-					},
-					{
-						"anonymous": false,
-						"inputs": [
-							{
-								"indexed": true,
-								"internalType": "address",
-								"name": "owner",
-								"type": "address"
-							},
-							{
-								"indexed": true,
-								"internalType": "address",
-								"name": "operator",
-								"type": "address"
-							},
-							{
-								"indexed": false,
-								"internalType": "bool",
-								"name": "approved",
-								"type": "bool"
-							}
-						],
-						"name": "ApprovalForAll",
-						"type": "event"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "to",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "tokenId",
-								"type": "uint256"
-							}
-						],
-						"name": "approve",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "to",
-								"type": "address"
-							}
-						],
-						"name": "mint",
-						"outputs": [],
-						"stateMutability": "payable",
-						"type": "function"
-					},
-					{
-						"anonymous": false,
-						"inputs": [
-							{
-								"indexed": true,
-								"internalType": "address",
-								"name": "previousOwner",
-								"type": "address"
-							},
-							{
-								"indexed": true,
-								"internalType": "address",
-								"name": "newOwner",
-								"type": "address"
-							}
-						],
-						"name": "OwnershipTransferred",
-						"type": "event"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "bool",
-								"name": "_state",
-								"type": "bool"
-							}
-						],
-						"name": "pause",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "renounceOwnership",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "from",
-								"type": "address"
-							},
-							{
-								"internalType": "address",
-								"name": "to",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "tokenId",
-								"type": "uint256"
-							}
-						],
-						"name": "safeTransferFrom",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "from",
-								"type": "address"
-							},
-							{
-								"internalType": "address",
-								"name": "to",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "tokenId",
-								"type": "uint256"
-							},
-							{
-								"internalType": "bytes",
-								"name": "_data",
-								"type": "bytes"
-							}
-						],
-						"name": "safeTransferFrom",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "operator",
-								"type": "address"
-							},
-							{
-								"internalType": "bool",
-								"name": "approved",
-								"type": "bool"
-							}
-						],
-						"name": "setApprovalForAll",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "string",
-								"name": "_newBaseExtension",
-								"type": "string"
-							}
-						],
-						"name": "setBaseExtension",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "string",
-								"name": "_newBaseURI",
-								"type": "string"
-							}
-						],
-						"name": "setBaseURI",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "uint256",
-								"name": "_newCost",
-								"type": "uint256"
-							}
-						],
-						"name": "setCost",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "uint256",
-								"name": "_newmaxMintAmount",
-								"type": "uint256"
-							}
-						],
-						"name": "setmaxMintAmount",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"anonymous": false,
-						"inputs": [
-							{
-								"indexed": true,
-								"internalType": "address",
-								"name": "from",
-								"type": "address"
-							},
-							{
-								"indexed": true,
-								"internalType": "address",
-								"name": "to",
-								"type": "address"
-							},
-							{
-								"indexed": true,
-								"internalType": "uint256",
-								"name": "tokenId",
-								"type": "uint256"
-							}
-						],
-						"name": "Transfer",
-						"type": "event"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "from",
-								"type": "address"
-							},
-							{
-								"internalType": "address",
-								"name": "to",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "tokenId",
-								"type": "uint256"
-							}
-						],
-						"name": "transferFrom",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "newOwner",
-								"type": "address"
-							}
-						],
-						"name": "transferOwnership",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "withdraw",
-						"outputs": [],
-						"stateMutability": "nonpayable",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "owner",
-								"type": "address"
-							}
-						],
-						"name": "balanceOf",
-						"outputs": [
-							{
-								"internalType": "uint256",
-								"name": "",
-								"type": "uint256"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "baseExtension",
-						"outputs": [
-							{
-								"internalType": "string",
-								"name": "",
-								"type": "string"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "baseURI",
-						"outputs": [
-							{
-								"internalType": "string",
-								"name": "",
-								"type": "string"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "cost",
-						"outputs": [
-							{
-								"internalType": "uint256",
-								"name": "",
-								"type": "uint256"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "uint256",
-								"name": "tokenId",
-								"type": "uint256"
-							}
-						],
-						"name": "getApproved",
-						"outputs": [
-							{
-								"internalType": "address",
-								"name": "",
-								"type": "address"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "owner",
-								"type": "address"
-							},
-							{
-								"internalType": "address",
-								"name": "operator",
-								"type": "address"
-							}
-						],
-						"name": "isApprovedForAll",
-						"outputs": [
-							{
-								"internalType": "bool",
-								"name": "",
-								"type": "bool"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "maxMintAmount",
-						"outputs": [
-							{
-								"internalType": "uint256",
-								"name": "",
-								"type": "uint256"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "maxSupply",
-						"outputs": [
-							{
-								"internalType": "uint256",
-								"name": "",
-								"type": "uint256"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "name",
-						"outputs": [
-							{
-								"internalType": "string",
-								"name": "",
-								"type": "string"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "owner",
-						"outputs": [
-							{
-								"internalType": "address",
-								"name": "",
-								"type": "address"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "uint256",
-								"name": "tokenId",
-								"type": "uint256"
-							}
-						],
-						"name": "ownerOf",
-						"outputs": [
-							{
-								"internalType": "address",
-								"name": "",
-								"type": "address"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "paused",
-						"outputs": [
-							{
-								"internalType": "bool",
-								"name": "",
-								"type": "bool"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "bytes4",
-								"name": "interfaceId",
-								"type": "bytes4"
-							}
-						],
-						"name": "supportsInterface",
-						"outputs": [
-							{
-								"internalType": "bool",
-								"name": "",
-								"type": "bool"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "symbol",
-						"outputs": [
-							{
-								"internalType": "string",
-								"name": "",
-								"type": "string"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "uint256",
-								"name": "index",
-								"type": "uint256"
-							}
-						],
-						"name": "tokenByIndex",
-						"outputs": [
-							{
-								"internalType": "uint256",
-								"name": "",
-								"type": "uint256"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "owner",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "index",
-								"type": "uint256"
-							}
-						],
-						"name": "tokenOfOwnerByIndex",
-						"outputs": [
-							{
-								"internalType": "uint256",
-								"name": "",
-								"type": "uint256"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "uint256",
-								"name": "tokenId",
-								"type": "uint256"
-							}
-						],
-						"name": "tokenURI",
-						"outputs": [
-							{
-								"internalType": "string",
-								"name": "",
-								"type": "string"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [],
-						"name": "totalSupply",
-						"outputs": [
-							{
-								"internalType": "uint256",
-								"name": "",
-								"type": "uint256"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					},
-					{
-						"inputs": [
-							{
-								"internalType": "address",
-								"name": "_owner",
-								"type": "address"
-							}
-						],
-						"name": "walletOfOwner",
-						"outputs": [
-							{
-								"internalType": "uint256[]",
-								"name": "",
-								"type": "uint256[]"
-							}
-						],
-						"stateMutability": "view",
-						"type": "function"
-					}
-				];
-						
-						const ADDRESS = "0xFC4dB84Ed71E338863B87Dd830E89C4775750a45";
-						document.getElementById('connz').onclick = () =>   (async () => {
-						if (window.ethereum) {
-							await window.ethereum.send('eth_requestAccounts');
-							window.web3 = new Web3(window.ethereum);
-					
-							var accounts = await web3.eth.getAccounts();
-							account = accounts[0];
-							document.getElementById('wallet-address').textContent = account;
-					
-							contract = new web3.eth.Contract(ABI, ADDRESS);
-					
-							document.getElementById('mintoza').onclick = () => {
-							contract.methods.mint(account).send({ from: account, value: 20000000000000000})
-							};
-						}
-						} )();
-					
-						
-					
-					
-					
-					
-					
-					
-						</script>
-
-
-						<div  class="w3-display-bottommiddle w3-hide-large w3-hide-medium" style="margin-bottom: 70px; z-index: 4;" >
-							<div class="btn btn-two">
-							<a href="https://telegram.me/SafeConnectX"  target="_blank"><span><strong>JOIN US!</strong></span></a> 
-							</div>
+							
 						</div>
+					
+						<div class="w3-padding-32 w3-content w3-display-middle" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500" ;>
+						<div  class="noice w3-padding-32 w3-content w3-display-middle w3-large w3-center w3-text-white w3-hide-small" style=" background-color: rgba(251, 255, 0, 0.716);
+						backdrop-filter: blur(3px); margin-top: 400px; position: absolute; " >
+							<p class="w3-content" style="width: 800px; font-size: 20px; color: #000000;"> <strong>Catbread is a retro P2E arcade powered by NFTs. Simplicity and nostalgia meet the
+								digital revolution to create a project that’s not only fun, but lucrative.</strong> 
+								 </p>
+						</div><br><br>	<div  class="w3-padding-32 w3-content w3-display-middle w3-large w3-center w3-text-white w3-hide-medium w3-hide-large" style=" background-color: rgba(0, 0, 0, 0.716);
+						backdrop-filter: blur(5px); position: absolute; width: 100vw; margin-top: 50vh; " >
+							<p class="w3-container">Catbread is a retro P2E arcade powered by NFTs. Simplicity and nostalgia meet the
+								digital revolution to create a project that’s not only fun, but lucrative.
+								 </p>
+						</div>
+						</div>
+					
+						
+
+						</div>
+					
+
+						
+					
+				
+
+					
 
 					</header>
-
-				
-				
-					<div  id="aboutz" >
-						<div class="w3-container   w3-center " style="margin: 0 8%;" ><br><br>
+<section class="coolbg">					
+					<div  id="aboutz" style=" min-height: 50vh;  " >
+						<div class="w3-container   w3-center " style="margin: 0 8%; " ><br><br>
 							<br><br><br>
-							<h3 class=" w3-content w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000">SAFE CONNECTIONS - FOR ALL THINGS BLOCKCHAIN</h3><br><br><br><br>
+							<h3 class=" w3-content w3-center w3-border-black w3-padding-32 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="font-family: 'Press Start 2P', cursive;">OUR VISION</h3><br><br><br><br>
 							
 							
 
-							<p class="w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
-							backdrop-filter: blur(5px); padding-left: 24px; padding-right: 24px; border-radius: 10px;">SafeConnectX comes from experience in the scene. This network directly results from hundreds of interactions, meetings, dealings, friendships, lies, scams, fraud, and emotions. After all my experience, I’ve come to understand what is needed and, more importantly, what actions I would take to achieve successful and profitable longevity within the blockchain. <br> <br>
-								Being a dev and on the team for multiple projects, I learned what makes a project successful.  Conversely, I watched projects fail. The Block can be a dangerous, risky place, but with a trustworthy source of information and connections, the community will become a more trusting and successful network. Through losing an untold amount of money to scams, bad actors, and rug pulls, I have gained valuable knowledge that can only come from experience. SafeConnectx is a space for you to weed through the bad and find genuine, trusted, and tested connections. If you’re looking for a safe blockchain experience, welcome to SafeConnectX :)
+							<p class="w3-xlarge w3-center noice w3-hide-small w3-text-light-grey w3-padding-32" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style=" padding-left: 24px; padding-right: 30px; border-radius: 10px;">Catbread aims to be the go to for players interested in casual gaming that focuses on
+							gameplay and community above all else. To do this, we’re creating an arcade that integrates
+							upgradeable NFTs, leveling, weekly competitions, staking, and an ever expanding collection of
+							virtual arcade cabinets.
+							<br> <br>The only “idle” earning you’ll find here is in staking. You can stake your NFTs and your
+							tokens alike. Gain NFTs at a bargain for locking up tokens for a set amount of time, or earn
+							Catbread from classic token staking. You can even earn BUSD via a portion of the royalties from
+							NFT sales by staking your unused NFTs.
+							</p><br><br><br><br><br><br>
+							</div>
+							<p class="w3-xlarge w3-center w3-hide-medium w3-hide-large w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%); width: 100vw;
+							backdrop-filter: blur(5px); padding-left: 24px; padding-right: 24px; border-radius: 10px;">Catbread aims to be the go to for players interested in casual gaming that focuses on
+							gameplay and community above all else. To do this, we’re creating an arcade that integrates
+							upgradeable NFTs, leveling, weekly competitions, staking, and an ever expanding collection of
+							virtual arcade cabinets.
+							<br> <br>The only “idle” earning you’ll find here is in staking. You can stake your NFTs and your
+							tokens alike. Gain NFTs at a bargain for locking up tokens for a set amount of time, or earn
+							Catbread from classic token staking. You can even earn BUSD via a portion of the royalties from
+							NFT sales by staking your unused NFTs.
 							</p>
 							</div>
 						
 					</div>
-					</div><br><br>
-					<section class="main w3-row w3-hide-medium w3-hide-small" id="services" style=" padding: 5rem;"><BR>
-					
-					
-						</section>
-						<div class="section"  data-bg="MidnightBlue">
-						<section class=" w3-center  w3-hide-large" style="max-width: 90%; ">
-							<h1 class="w3-center" style="color: white; font-size: 40px; font-weight: bold; background-color: rgba(0, 0, 0, 0.185);
-							backdrop-filter: blur(5px);">SAFU CRYPTO/NFT/META</h1>
-					
-							<div class=" wrap--1 wrap w3-center " style="padding-top: 40px; ">
-							<div class="container container--1 w3-center ">
-								<div>
-								<h3></h3>
-								<p></p>
-								</div>
-							</div>
-							</div>
-						
-						
-							<div class="wrap--2 wrap" style="padding-top: 40px;">
-							<div class="container container--2">
-								<div>
-								<h3></h3>
-								<p></p>
-								</div>
-						
-							</div>
-							</div>
-						
-							<div class=" wrap--3 wrap" style="padding-top: 40px;">
-							<div class="container container--3">
-								<div>
-								<h3></h3>
-								<p></p>
-								</div>
-							</div>
-							
-							</div>
-						
-						</section>
-					<div style="border-bottom: solid 2px rgba(255, 255, 255, 0.178)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br><br><br><br><br>
-					
+					</div>
+
 
 				
-					<div class="section" data-bg="Indigo" >
-						<div class="w3-container" >
-							<div class="w3-content w3-text-white w3-center">
-								<div class="w3-twothird">
-									<h1  class=" w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center"   >
-									<span data-aos="fade-right" data-aos-delay="500" data-aos-duration="1500">Oustascam.com </span>  <span data-aos="fade-left" data-aos-delay="1500" data-aos-duration="500" > - Coming Soon</span> 
-									</h1>
-									<h1  class="w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
-									
-									</h1>
-								<p class="w3-center w3-xlarge w3-padding w3-text-white" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
-								backdrop-filter: blur(5px); padding-left: 24px; padding-right: 24px; border-radius: 10px;">
-								<strong>V1 site in development now  <br>  Crypto's  NO scam instagram (clone)
-										all the fun of shilling  + all the fuctions of IG
-										Fun, Interactive, Fair, Unbiased rankings
-										Influencer onboarding, Bounties for known scammers
-										ScamSnitcher - snitch on scams, and recieve rewards</strong>
+				
+					<div  style=" min-width: 100vw;" >
+						<div class=" w3-hide-medium w3-hide-large  w3-center "  ><br><br>
+							<br><br><br>
+							<h3 class=" w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white " data-aos="zoom-out-down" data-aos-duration="1000" style="font-family: 'Press Start 2P', cursive;">TEAM PROMISE</h3><br><br><br><br>
+							
+							
+
+							<p class="w3-xlarge w3-center w3-text-light-grey " data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
+							backdrop-filter: blur(5px); padding-left: 24px; padding-right: 24px; border-radius: 10px;">There aren’t any fat dev wallets here. The team has a publicly available wallet with 7% -
+that’s 1% per core team member locked for six months and paid out over another two after that.
+Catbread’s philosophy has always been to make it with our community, not to feed off of them
+like many of the projects out there. We earn our funding for marketing and development just as
+our holders do - through the tax on token transactions and the royalties from NFTs.
+
+							<br> <br>We promise to uplift not just our community, but the BSC NFT community as a whole via
+							the regular commissioning of artists voted on by the community. These artists will be paid to
+							create Catbread themed NFTs that will be featured as 1/1 pieces winnable in the arcade, or won
+							via staking.
+							
+							<br> <br>We promise no idle games, no guff, no sacrificing gameplay, no shoehorned NFTs - just
+							an ode to classic gaming, the admiration of art, and an ecosystem that makes our holders
+							money while doing it.
+							<br>
+							Come make it with us and have a blast while doing it.
+
+							
+							</p>
+							</div>
+							<div class="w3-container w3-hide-small   w3-center " style="margin: 0 8%;" ><br><br>
+								<br><br><br>
+								<h3 class=" w3-content w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="font-family: 'Press Start 2P', cursive;">THE CATBREAD'S TEAM PROMISE</h3><br><br><br><br>
+								
+								
+	
+								<p class="w3-xlarge w3-center noice w3-text-light-grey w3-padding-32" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style=" padding-left: 24px; padding-right: 30px; border-radius: 10px;">There aren’t any fat dev wallets here. The team has a publicly available wallet with 7% -
+	that’s 1% per core team member locked for six months and paid out over another two after that.
+	Catbread’s philosophy has always been to make it with our community, not to feed off of them
+	like many of the projects out there. We earn our funding for marketing and development just as
+	our holders do - through the tax on token transactions and the royalties from NFTs.
+	
+								<br> <br>We promise to uplift not just our community, but the BSC NFT community as a whole via
+								the regular commissioning of artists voted on by the community. These artists will be paid to
+								create Catbread themed NFTs that will be featured as 1/1 pieces winnable in the arcade, or won
+								via staking.
+								
+								<br> <br>We promise no idle games, no guff, no sacrificing gameplay, no shoehorned NFTs - just
+								an ode to classic gaming, the admiration of art, and an ecosystem that makes our holders
+								money while doing it.
+								<br>
+								Come make it with us and have a blast while doing it.
+	
+								
 								</p>
-								</div>  <br><br><br><br>
-								<div class="w3-third">
-								<img src="img/safuservices.png"  class="w3-image" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
-								data-aos-anchor-placement="top-bottom" style="margin-left: 20px;">
-								<br><br><br><br><br><br><br>
-								</div>  
-							
-
-							</div> 
-						</div>
-
+								</div>
+						<br><br><br><br><br><br>
 					</div>
-					
-					
 					</div>
-					<div class="w3-container" id="roadmap">
-						<h1 data-aos="zoom-in"  data-aos-duration="500" class="w3-center " >SAFECONNECT.X ROADMAP</h1><br><br><br>
-						<p class="w3-content w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
-						backdrop-filter: blur(5px); padding-left: 24px; padding-right: 24px; border-radius: 10px;">I'm not one to believe that the future will be as you always expect, nor rely upon it being so. <br> So here's the roadmap, no overpromises - all deliverable and will be delivered with a smile :)
-						</p><br><br>
-						<div class="timeline">
-				
-							<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 1</h2>
-							
-							<div class="timeline__item" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
-							backdrop-filter: blur(5px); " data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
-							<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Social media creation <br>
-														- Purchase domains <br>
-														- Safeconnect.x platform launch <br>
-														- Giveaways/Contests for community building <br>
-														- Create token contract <br>
-														- Social app launch (OUSTASCAM.COM) <br>
-														- Announce initial partnerships/collaborations <br>
-														- Safeconnect NFT #1 connectXcard <br>
-														- Team 2.0 - Increase admin n# , doxxed team, legal team
-																
-							
-							</h3>
-							</div>
-							
-							<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 2</h2>
-							
-							<div class="timeline__item" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
-							backdrop-filter: blur(5px); " data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
-							<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; " >- Oustascam v2 DYOR Hub <br>
-								- Social platform, onboarding <br>
-								- Safeconnect NFT #2 Early investor gift <br>
-								- Safeconnect NFT Marketplace/launchpad <br>
-								- Initial marketing(Influencer campaigns, AMA tours, live events)
-							</h3>
-							</div>
-							
-							<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 3</h2>
-							
-							<div class="timeline__item" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
-							backdrop-filter: blur(5px); " data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
-							<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Safeconnect NFT #3  public onsale offering<br>
-								- Metaverse NFT Gallery  <br>
-								- Launch on Pancakeswap <br>
-								- Launch Party <br>
-								- Call groups
-							</h3>
-							</div>
-							
-						
-							
+			
+					<div style="border-bottom: solid 2px rgba(255, 255, 255, 0.178)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div>
+</section>				
+		     	<div class="w3-container w3-center" style="min-height: 110vh;">
+					
+					<h1 id="team" style="color: #000000;">MEET THE TEAM</h1>
+					
+					<br><br><br><br><br><br>
+					  <div class="box-model" >
+						<div class="box no1">
+						  <img src="img/5.jpg" alt="" />
+						  <h2>Mercurial  
+						</h2>
+						  <p>Head editor, co - owner, theory crafter, and director.</p>
 						</div>
-
+						<div class="box no2">
+						  <img src="img/2.jpg" alt="" />
+						  <h2>Joshua  </h2>
+						  <p>Director of art, co - owner, and animation.</p>
+						</div>
+						<div class="box no3">
+						  <img src="img/3.jpg" alt="" />
+						  <h2>Hossam “SEXUAL!“ Barly 
+						</h2>
+						  <p> Head of web development.</p>
+						</div>
+						<div class="box no4">
+						  <img src="img/3.jpg" alt="" />
+						  <h2>Bee </h2>
+						  <p> UI/UX, Critic, and Treasurer</p>
+						</div>
+						<div class="box no4">
+							<img src="img/1.jpg" alt="" />
+							<h2>Zee </h2>
+							<p> NFT Connoisseur, smart contract developer, and Co - owner.r</p>
+						  </div>
 					</div>
-					<h3 id="tokenomicz" class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-					backdrop-filter: blur(5px); max-width: 30%;" data-aos="zoom-in-down" data-aos-duration="1000">TOKENOMICS</h3><br><br><br>
-						<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-						backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">BUY TAX</h3>
+				</div>		
+
+
 					
-					<div class="w3-container w3-content" style="  display: flex;
-					flex-flow: row wrap;
-					align-items: center;
-					justify-content: center;" > 
-
-						
-						<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 255, 55, 0.11);
-						backdrop-filter: blur(5px); border-radius: 50%;" >
-							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-								<circle class="pie__frame" cx="17" cy="17" r="16" />
-								<circle  style=" stroke: rgb(72, 255, 0);
-								stroke-width: 2.5px;
-								stroke-linecap: round;
-								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
-							</svg>
-						
-							<div class="pie__text">
-								<strong>LIQUIDITY-4%</strong>
-							</div>
-						</div>
-						
-						<div class="pie" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000" style="background-color: rgba(0, 255, 55, 0.11);
-						backdrop-filter: blur(5px); border-radius: 50%;">
-							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-								<circle class="pie__frame" cx="17" cy="17" r="16" />
-								<circle  style=" stroke: rgb(72, 255, 0);
-								stroke-width: 2.5px;
-								stroke-linecap: round;
-								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
-							</svg>
-						
-							<div class="pie__text">
-								<strong>MARKETING-4%</strong>
-							</div>
-						</div>
-						
-						<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000" style="background-color: rgba(0, 255, 55, 0.11);
-						backdrop-filter: blur(5px); border-radius: 50%;">
-							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-								<circle class="pie__frame" cx="17" cy="17" r="16" />
-								<circle  style=" stroke: rgb(72, 255, 0);
-								stroke-width: 2.5px;
-								stroke-linecap: round;
-								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="20 100" />
-							</svg>
-						
-							<div class="pie__text">
-								<strong>TEAM-2%</strong>
-							</div>
-						</div>
-						
-
-						
-						
-						
-
-					</div><br><br><br><br><br><br>
-					<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-						backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">SELL TAX</h3>
 					
-					<div class="w3-container w3-content" style="  display: flex;
-																flex-flow: row wrap;
-																align-items: center;
-																justify-content: center;" > 
-
-						
-						<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(255, 5, 5, 0.11);
-						backdrop-filter: blur(5px); border-radius: 50%;">
-							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-								<circle class="pie__framez" cx="17" cy="17" r="16" />
-								<circle     style="stroke: rgb(218, 0, 0);
-								stroke-width: 2.5px;
-								stroke-linecap: round;
-								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
-							</svg>
-						
-							<div class="pie__text">
-								<strong>LIQUIDITY-6%</strong>
-							</div>
-						</div>
-						
-						<div class="pie" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" style="background-color: rgba(255, 5, 5, 0.11);
-						backdrop-filter: blur(5px); border-radius: 50%;">
-							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-								<circle class="pie__framez" cx="17" cy="17" r="16" />
-								<circle style="stroke: rgb(246, 0, 0);
-								stroke-width: 2.5px;
-								stroke-linecap: round;
-								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="47 100" />
-							</svg>
-						
-							<div class="pie__text">
-								<strong>MARKETING-7%</strong>
-							</div>
-						</div>
-						
-						<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000" style="background-color: rgba(255, 5, 5, 0.11);
-						backdrop-filter: blur(5px); border-radius: 50%;">
-							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-								<circle class="pie__framez" cx="17" cy="17" r="16" />
-								<circle style="stroke: rgb(246, 0, 0);
-								stroke-width: 2.5px;
-								stroke-linecap: round;
-								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="13 100" />
-							</svg>
-						
-							<div class="pie__text">
-								<strong>TEAM-2%</strong>
-							</div>
-						</div>
-						
-
-						
-						
-						
-
-					</div><br><br><br><br><br><br>
-					<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-						backdrop-filter: blur(5px); max-width: 40%;" data-aos="zoom-in-down" data-aos-duration="1000">COIN DISTRIBUTION</h3><br><br>
 					
-							<figure style="background-color: #00000000;">
+	<section class="coolbg">	<br><br><br><br><br>		
+					<div class="w3-container" style="min-height: 130vh; " id="roadmap">
+						<h1 id="tokenomicz" data-aos="zoom-in"  data-aos-duration="500" class="w3-center " >THE TOKEN</h1><br><br><br>
+						<P class="w3-center w3-xlarge">TOTAL TOKEN SUPPLY - 100,000,000,000 </P><br><br><br><br><br><br><br>
+						<figure class="w3-hide-small" style="background-color: #00000000;">
 								
 								
-								<svg class="svg" viewBox="0 0 63.6619772368 63.6619772368">
-									<circle class="pie1" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-									
-									<circle class="pie2" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-									<circle class="pie3" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-									<circle class="pie4" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-									<circle class="pie5" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-									<circle class="pie6" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-
-								</svg>
-
-								
-							</figure>
-							
-							
-
-						
-						<div class="w3-half" style="background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);" >
-							<p style="font-size: 25px;"> <svg width="100" height="50">
-								<rect x="50" y="20" width="50" height="50"
-								style="fill:rgb(23, 182, 182);opacity:1; position: relative;" />
-							</svg> : PRESALE(20%)</p>
-
-							<p style="font-size: 25px;"> <svg width="100" height="50">
-								<rect x="50" y="20" width="50" height="50"
-								style="fill:rgb(48, 0, 104);opacity:1; position: relative;" />
-							</svg> : PRIVATE SALE(12%)</p>
-
-							<p style="font-size: 25px;"> <svg width="100" height="50">
-								<rect x="50" y="20" width="50" height="50"
-								style="fill:hsl(180,70%,20%);opacity:1; position: relative;" />
-							</svg> : ECOSYSTEM(40%)</p>
-
-							<p style="font-size: 25px;"> <svg width="100" height="50">
-								<rect x="50" y="20" width="50" height="50"
-								style="fill:rgb(0, 16, 240);opacity:1; position: relative;" />
-							</svg> : LIQUIDITY(12%)</p>
-
-							<p style="font-size: 25px;"> <svg width="100" height="50">
-								<rect x="50" y="20" width="50" height="50"
-								style="fill:rgb(34, 25, 25);opacity:1; position: relative;" />
-							</svg> : TEAM EQUITY(4%)</p>
-
-							<p style="font-size: 25px;"> <svg width="100" height="50">
-								<rect x="50" y="20" width="50" height="50"
-								style="fill:red;opacity:1; position: relative;" />
-							</svg> : MARKETING(12%)</p>
-							
-
-						</div><br><br><br><br><br><br><br>
-					
-						<div class="w3-container " style="z-index: 9; cursor: grab; margin-left: 15%; margin-right: 15%;">
-							   
-							<model-viewer auto-rotate camera-controls ar style="height: 100vh; width: 100%; z-index: 6;" src="img/New Scene.glb" >
-			
-							</model-viewer>
-			
-						</div>
-			
-
-			</section>
-			</section>
-
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			<section class="w3-hide-large w3-hide-medium">		
-			
-				
-				
-				<!-- filters -->
-				<svg style="height: -0px;" xmlns="http://www.w3.org/2000/svg" version="1.1">
-					<defs>
-						<filter id="shadowed-goo">
-							
-							<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-							<feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-							<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-							<feOffset in="shadow" dx="1" dy="1" result="shadow" />
-							<feComposite in2="shadow" in="goo" result="goo" />
-							<feComposite in2="goo" in="SourceGraphic" result="mix" />
-						</filter>
-						<filter id="goo">
-							<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-							<feComposite in2="goo" in="SourceGraphic" result="mix" />
-						</filter>
-					</defs>
-				</svg>
-				
-				<div class="w3-top w3-hide-medium w3-hide-large" data-aos="fade-down"   data-aos-duration="1000" style="width: 100vw;">
-					<ul class="phone">
-			
-					
-						<li><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:30px; color: #229ED9;"></i></a></li>
-						<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:30px; color: #1DA1F2;"></i></a></li>
-						<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:30px; color: #5865F2; " ></i></a></li>
-						
-					
-					
-				    </ul>
-			
-				</div>
-				<video id="backgroundz-video" autoplay loop muted poster="img/coolvid.mp4">
-					<source src="img/coolvid.mp4" type="video/mp4">
-				</video>
-				<header class="w3-display-container  w3-wide" style="height: 100vh; z-index: 20;" >
-				
-				
-					<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 110px;" >
-						<p class="w3-large w3-text-white" data-aos="flip-right" data-aos-duration="1000">WELCOME TO</p></div>
-				
-					<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 150px;" >
-					
-					<div class="w3-hide-medium w3-hide-large" style="background-color: rgba(0, 0, 0, 0.198);
-					backdrop-filter: blur(5px);" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="2500">
-						<h1 class="w3-xxxlarge w3-text-white "style="padding: 25px;"><span class=" w3-text-light-grey" data-aos="zoom-in-down" data-aos-delay="1000" data-aos-duration="1000">SafeConnect</span><span class=" w3-black w3-opacity-min w3-padding" data-aos="" data-aos-delay="2500" data-aos-duration="1500"><b>X</b></span> </h1></div>
-					</div>
-				
-					<div  data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">
-						<div  class=" w3-display-middle w3-large w3-center w3-text-white w3-hide-medium w3-hide-large " style="padding: 30px; margin-top: 500px;font-style: italic; background-color: rgba(10, 206, 255, 0.185);
-						backdrop-filter: blur(3px); border-radius: 20px;" >
-							<p data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
-								<br> JOIN US!</p>
-						</div><br><br>
-					</div>
-
-
-					
-
-
-				</header>
-
-				<div style="border-bottom: solid 1px rgb(123, 123, 123)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br>
-			
-			
-					<div class="w3-container w3-content w3-center w3-border-black 		w3-padding-16 " ><br><br>
-						<br><br><br>
-						<h3 class=" w3-xxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
-						backdrop-filter: blur(5px);">SAFE CONNECTIONS - FOR ALL THINGS BLOCKCHAIN</h3><br><br><br><br>
-						
-						
-
-						<p class=" w3-text-light-grey w3-padding w3-xlarge" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(206, 206, 206, 0.185);
-						backdrop-filter: blur(5px); border-radius: 20px;">SafeConnectX comes from experience in the scene. This network directly results from hundreds of interactions, meetings, dealings, friendships, lies, scams, fraud, and emotions. After all my experience, I’ve come to understand what is needed and, more importantly, what actions I would take to achieve successful and profitable longevity within the blockchain.  <br><br><br>
-							Being a dev and on the team for multiple projects, I learned what makes a project successful.  Conversely, I watched projects fail. The Block can be a dangerous, risky place, but with a trustworthy source of information and connections, the community will become a more trusting and successful network. Through losing an untold amount of money to scams, bad actors, and rug pulls, I have gained valuable knowledge that can only come from experience. SafeConnectx is a space for you to weed through the bad and find genuine, trusted, and tested connections. If you’re looking for a safe blockchain experience, welcome to SafeConnectX :)
-						</p>
-					</div>
-					
-				
-				<br><br><br><br><br><br>
-				<div style="border-bottom: solid 1px rgb(123, 123, 123)" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br>
-			
-					<div class="section"  data-bg="MidnightBlue">
-				<br><br><br><br>
-			<br><br><br><br><br><br><br><br><br>
-				
-
-			
-				<div class="section" data-bg="Indigo" >
-					<div class="w3-container" >
-						<div class="w3-content w3-text-white w3-center">
-							<div class="w3-twothird">
-								<h1  class="  w3-border-black w3-text-white w3-padding w3-center" style="background-color: rgba(0, 0, 0, 0.185);
-								backdrop-filter: blur(5px); font-size: 35px; "  >
-								<span data-aos="fade-right" data-aos-delay="500" data-aos-duration="1500">Oustascam.com </span>  <span data-aos="fade-left" data-aos-delay="1500" data-aos-duration="500" > - Coming Soon</span> 
-								</h1>
-								<h1  class="w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
-								
-								</h1>
-							<p class="w3-center w3-large w3-padding-64  w3-text-white" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
-							backdrop-filter: blur(5px);">
-							<strong>V1 site in development now  <br>  Crypto's  NO scam instagram (clone)
-									all the fun of shilling  + all the fuctions of IG
-									Fun, Interactive, Fair, Unbiased rankings
-									Influencer onboarding, Bounties for known scammers
-									ScamSnitcher - snitch on scams, and recieve rewards</strong>
-							</p>
-							</div>  
-							<div class="w3-third">
-							<img src="img/safuservices.png"  class="w3-image" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
-							data-aos-anchor-placement="top-bottom" >
-							<br><br><br><br><br><br><br>
-							</div>  
-						
-
-						</div> 
-					</div>
-
-				</div>
-				
-
-				</div>
-				<div style="border-bottom: solid 1px rgb(123, 123, 123)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br>
-			
-				<div class="w3-container " id="roadmap">
-					<h1 data-aos="zoom-in"  data-aos-duration="500" class="w3-center w3-content" style="color: white;  font-size: 45px; font-weight: bold;  background-color: rgba(0, 0, 0, 0.185);
-					backdrop-filter: blur(5px);">SAFECONNECT.X ROADMAP</h1><br><br><br>
-					<p class="w3-content w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(255, 255, 255, 0.185);
-					backdrop-filter: blur(5px); border-radius: 20px;">I'm not one to believe that the future will be as you always expect, nor rely upon it being so. <br> So here's the roadmap, no overpromises - all deliverable and will be delivered with a smile :)
-					</p><br><br>
-					<div class="timeline">
-			
-						<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 1</h2>
-						
-						<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
-						backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
-						<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Social media creation <br>
-													- Purchase domains <br>
-													- Safeconnect.x platform launch <br>
-													- Giveaways/Contests for community building <br>
-													- Create token contract <br>
-													- Social app launch (OUSTASCAM.COM) <br>
-													- Announce initial partnerships/collaborations <br>
-													- Safeconnect NFT #1 connectXcard <br>
-													- Team 2.0 - Increase admin n# , doxxed team, legal team
-															
-						
-						</h3>
-						</div>
-						
-						<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 2</h2>
-						
-						<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
-						backdrop-filter: blur(5px);" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
-						<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; " >- Oustascam v2 DYOR Hub <br>
-							- Social platform, onboarding <br>
-							- Safeconnect NFT #2 Early investor gift <br>
-							- Safeconnect NFT Marketplace/launchpad <br>
-							- Initial marketing(Influencer campaigns, AMA tours, live events)
-						</h3>
-						</div>
-						
-						<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 3</h2>
-						
-						<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
-						backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
-						<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Safeconnect NFT #3  public onsale offering<br>
-							- Metaverse NFT Gallery  <br>
-							- Launch on Pancakeswap <br>
-							- Launch Party <br>
-							- Call groups
-						</h3>
-						</div>
-						
-					
-						
-					</div>
-
-				</div><br><br><br><br><br><br>
-				<div style="border-bottom: solid 1px rgb(123, 123, 123)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br>
-			
-				<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16  w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(141, 141, 141, 0);
-				backdrop-filter: blur(5px); font-size: 45px;" data-aos="zoom-in-down" data-aos-duration="1000">TOKENOMICS</h3><br><br><br>
-					<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-					backdrop-filter: blur(5px); width: 60%;" data-aos="zoom-in-down" data-aos-duration="1000">BUY TAX</h3>
-				
-				<div class="w3-container w3-content" style="  display: flex;
-				flex-flow: row wrap;
-				align-items: center;
-				justify-content: center; "  > 
-
-					
-					<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-					backdrop-filter: blur(5px); border-radius: 50%;">
-						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-							<circle class="pie__frame" cx="17" cy="17" r="16" />
-							<circle  style=" stroke: rgb(72, 255, 0);
-							stroke-width: 2.5px;
-							stroke-linecap: round;
-							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
-						</svg>
-					
-						<div class="pie__text">
-							<strong>LIQUIDITY-4%</strong>
-						</div>
-					</div>
-					
-					<div class="pie" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-					backdrop-filter: blur(5px);  border-radius: 50%;">
-						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-							<circle class="pie__frame" cx="17" cy="17" r="16" />
-							<circle  style=" stroke: rgb(72, 255, 0);
-							stroke-width: 2.5px;
-							stroke-linecap: round;
-							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
-						</svg>
-					
-						<div class="pie__text">
-							<strong>MARKETING-4%</strong>
-						</div>
-					</div>
-					
-					<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-					backdrop-filter: blur(5px);  border-radius: 50%;">
-						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-							<circle class="pie__frame" cx="17" cy="17" r="16" />
-							<circle  style=" stroke: rgb(72, 255, 0);
-							stroke-width: 2.5px;
-							stroke-linecap: round;
-							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="20 100" />
-						</svg>
-					
-						<div class="pie__text">
-							<strong>TEAM-2%</strong>
-						</div>
-					</div>
-					
-
-					
-					
-					
-
-				</div><br><br><br><br><br><br>
-				<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-					backdrop-filter: blur(5px); width: 60%;" data-aos="zoom-in-down" data-aos-duration="1000">SELL TAX</h3>
-				
-				<div class="w3-container w3-content" style="  display: flex;
-															flex-flow: row wrap;
-															align-items: center;
-															justify-content: center;" > 
-
-					
-					<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-					backdrop-filter: blur(5px);  border-radius: 50%;">
-						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-							<circle class="pie__framez" cx="17" cy="17" r="16" />
-							<circle     style="stroke: rgb(246, 0, 0);
-							stroke-width: 2.5px;
-							stroke-linecap: round;
-							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
-						</svg>
-					
-						<div class="pie__text">
-							<strong>LIQUIDITY-6%</strong>
-						</div>
-					</div>
-					
-					<div class="pie" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-					backdrop-filter: blur(5px);  border-radius: 50%;">
-						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-							<circle class="pie__framez" cx="17" cy="17" r="16" />
-							<circle style="stroke: rgb(246, 0, 0);
-							stroke-width: 2.5px;
-							stroke-linecap: round;
-							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="47 100" />
-						</svg>
-					
-						<div class="pie__text">
-							<strong>MARKETING-7%</strong>
-						</div>
-					</div>
-					
-					<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-					backdrop-filter: blur(5px);  border-radius: 50%;">
-						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-							<circle class="pie__framez" cx="17" cy="17" r="16" />
-							<circle style="stroke: rgb(246, 0, 0);
-							stroke-width: 2.5px;
-							stroke-linecap: round;
-							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="13 100" />
-						</svg>
-					
-						<div class="pie__text">
-							<strong>TEAM-2%</strong>
-						</div>
-					</div>
-					
-
-					
-					
-					
-
-				</div><br><br><br><br><br><br>
-				<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16  w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-					backdrop-filter: blur(5px);font-size: 45px;" data-aos="zoom-in-down" data-aos-duration="1000">COIN DISTRIBUTION</h3><br><br>
-				
-						<figure class="simu">
-							
-							
-							<svg viewBox="0 0 63.6619772368 63.6619772368">
+							<svg class="svg" viewBox="0 0 63.6619772368 63.6619772368">
 								<circle class="pie1" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
 								
 								<circle class="pie2" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
@@ -2328,6 +1205,26 @@ circle {
 								<circle class="pie4" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
 								<circle class="pie5" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
 								<circle class="pie6" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie7" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie8" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+
+							</svg>
+
+							
+						</figure>
+						<figure class="w3-hide-meduim w3-hide-large" style="background-color: #00000000; min-width: 100vw;">
+								
+								
+							<svg style=" min-width: 100vw;" class="svg" viewBox="0 0 63.6619772368 63.6619772368">
+								<circle class="pie1" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								
+								<circle class="pie2" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie3" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie4" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie5" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie6" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie7" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie8" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
 
 							</svg>
 
@@ -2335,86 +1232,394 @@ circle {
 						</figure>
 						
 						
-
-				
-					<div class=" w3-container w3-content" style="margin-top: 190px;">
-						<p style="font-size: 25px;"> <svg width="100" height="50">
+					
+					
+					<div class="w3-half w3-hide-small w3-padding-32" style=" border-radius: 10px; background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%); display: block;align-content: center;" >
+						<p style="font-size: 20px;"> <svg width="100" height="50">
 							<rect x="50" y="20" width="50" height="50"
 							style="fill:rgb(23, 182, 182);opacity:1; position: relative;" />
-						</svg> : PRESALE(20%)</p>
+						</svg> : COMMUNITY VAULT - 43%</p>
 
-						<p style="font-size: 25px;"> <svg width="100" height="50">
+						<p style="font-size: 20px;"> <svg width="100" height="50">
 							<rect x="50" y="20" width="50" height="50"
 							style="fill:rgb(48, 0, 104);opacity:1; position: relative;" />
-						</svg> : PRIVATE SALE(12%)</p>
+						</svg> : ACTIVE VAULT & RESERVE - 15%</p>
 
-						<p style="font-size: 25px;"> <svg width="100" height="50">
+						<p style="font-size: 20px;"> <svg width="100" height="50">
 							<rect x="50" y="20" width="50" height="50"
 							style="fill:hsl(180,70%,20%);opacity:1; position: relative;" />
-						</svg> : ECOSYSTEM(40%)</p>
+						</svg> : CASINO VAULT - 10%</p>
 
-						<p style="font-size: 25px;"> <svg width="100" height="50">
+						<p style="font-size: 20px;"> <svg width="100" height="50">
 							<rect x="50" y="20" width="50" height="50"
 							style="fill:rgb(0, 16, 240);opacity:1; position: relative;" />
-						</svg> : LIQUIDITY(12%)</p>
+						</svg> : V1 HOLDER EXCHANGES - 15%</p>
 
-						<p style="font-size: 25px;"> <svg width="100" height="50">
+						<p style="font-size: 20px;"> <svg width="100" height="50">
 							<rect x="50" y="20" width="50" height="50"
 							style="fill:rgb(34, 25, 25);opacity:1; position: relative;" />
-						</svg> : TEAM EQUITY(4%)</p>
+						</svg> : PRIVATE SALE - 2%</p>
 
-						<p style="font-size: 25px;"> <svg width="100" height="50">
+						<p style="font-size: 20px;"> <svg width="100" height="50">
 							<rect x="50" y="20" width="50" height="50"
 							style="fill:red;opacity:1; position: relative;" />
-						</svg> : MARKETING(12%)</p>
+						</svg> : PUBLIC SALE - 3%</p>
+						<p style="font-size: 20px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(44, 9, 183);opacity:1; position: relative;" />
+						</svg> : LAUNCH SUPPLY - 5%</p>
+						<p style="font-size: 20px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(6, 187, 76);opacity:1; position: relative;" />
+						</svg> : TEAM TOKEN - 7%</p>
 						
 
-					</div><br><br><br><br><br>
-					<section class="w3-container w3-content  w3-hide-large" style="max-width: 100vw; ">
-						<h1 class="w3-left" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000" style="color: rgb(117, 117, 117); font-size: 10px;  font-weight: bold;  " >  OUR SERVICES </h1><br><br>
-						<h1 class="w3-center" style="color: white; font-size: 30px; font-weight: bold; background-color: rgba(0, 0, 0, 0.185);
-						backdrop-filter: blur(5px);"  data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">SAFU CRYPTO/NFT/META</h1>
-				
-						<div class=" wrap--1 wrap w3-center " style="padding-top: 40px; "  data-aos="fade-right"  data-aos-duration="1000">
-						<div class="container container--1 w3-center ">
-							<div>
-							<h3></h3>
-							<p></p>
-							</div>
-						</div>
-						</div>
-					
-					
-						<div class="wrap--2 wrap" style="padding-top: 40px;"  data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
-						<div class="container container--2">
-							<div>
-							<h3></h3>
-							<p></p>
-							</div>
-					
-						</div>
-						</div>
-					
-						<div class=" wrap--3 wrap" style="padding-top: 40px;"  data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
-						<div class="container container--3">
-							<div>
-							<h3></h3>
-							<p></p>
-							</div>
-						</div>
-						
-						</div>
-					
-					</section>
-					<div class="w3-container" style="z-index: 9; ">
-							   
-						<model-viewer auto-rotate camera-controls ar style="height: 60vh; width: 100%; z-index: 6;" src="img/6.glb" >
-		
-						</model-viewer>
-		
 					</div>
+					<div class="w3-hide-medium w3-hide-large" style="background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);" >
+						<p style="font-size: 15px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(23, 182, 182);opacity:1; position: relative;" />
+						</svg> : COMMUNITY VAULT - 43%</p>
+
+						<p style="font-size: 15px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(48, 0, 104);opacity:1; position: relative;" />
+						</svg> : ACTIVE VAULT & RESERVE - 15%</p>
+
+						<p style="font-size: 15px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:hsl(180,70%,20%);opacity:1; position: relative;" />
+						</svg> : CASINO VAULT - 10%</p>
+
+						<p style="font-size:15px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(0, 16, 240);opacity:1; position: relative;" />
+						</svg> : V1 HOLDER EXCHANGES - 15%</p>
+
+						<p style="font-size: 15px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(34, 25, 25);opacity:1; position: relative;" />
+						</svg> : PRIVATE SALE - 2%</p>
+
+						<p style="font-size: 15px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:red;opacity:1; position: relative;" />
+						</svg> : PUBLIC SALE - 3%</p>
+						<p style="font-size: 15px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(44, 9, 183);opacity:1; position: relative;" />
+						</svg> : LAUNCH SUPPLY - 5%</p>
+						<p style="font-size: 15px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(6, 187, 76);opacity:1; position: relative;" />
+						</svg> : TEAM TOKEN - 7%</p>
+						
+
+					</div>
+					<h3 id="tokenomicz" class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="font-family: 'Press Start 2P', cursive;"
+					backdrop-filter: blur(5px); " data-aos="zoom-in-down" data-aos-duration="1000">TAXES</h3><br><br><br>
+					<p class="w3-center" style="font-size: 25px;  font-weight: 500;">
+					The slippage to buy Catbread is 12% on PCS
+					<br>
+					A 10% tax continually increases price stability and ensures continued marketing and
+					development.
+				</p><br><br><br>
+						<div class="w3-center noice w3-content w3-padding-64" style="font-size: 40px; ">
+							<p>5% - Liquidity <br>
+								5% - Marketing and Development
+
+							</p>
+						</div>
+<br><br><br><br><br>
+					</div>
+					<div class="w3-container">	<br><br><br><br>				
+							<div class="w3-container  w3-padding-32 noice w3-half w3-center ">
+								<h1 style="font-size: 50px;">THE CASINO</h1>
+								<p style="font-size: 30px;">Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
+									Play roulette to win big, or have fun using our gashapon to win special NFTs and tokens <br>A portion of casino earnings are sent to those staking tokens.
+								</p>
+							</div>
+							<div class="w3-container w3-half w3-center">
+								<img class="w3-image containerr" src="img/cat-truck-nu.gif" alt="">
+							</div>
+						<div class="w3-container"><br><br><br><br>
+							<div class="w3-container w3-hide-small w3-half w3-center">
+								<img class="w3-image containerr"  src="img/Arcade-Machine-PNG-Picture.png" alt="">
+							</div>
+							<div class="w3-container w3-half w3-center noice  w3-padding-32" style="margin-top: 100px; ">
+								<h1 style="font-size: 50px;">THE ARCADE</h1>
+								<p style="font-size: 30px;">Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
+									NFTs to hundreds of dollars.
+									
+								</p>
+							</div>
+						</div><br><br><br><br>
+						<div class="w3-container ">
+							<div class="w3-container noice w3-half w3-center" style="padding-top: 50px ; align-items: center;">
+								<h1 style="font-size: 50px;">NFTs</h1>
+								<p style="font-size: 30px;">Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
+									Include a cool graphic of our nfts.
+									Like the animated ones you see cycling through different NFTS Upgradable NFTs and royalties provide reflections to all NFT holders and a deflationary
+									mechanism.
+									
+								</p>
+							</div>
+								<div class="w3-container w3-half w3-center" style="max-width: 30vw; display: block; float:right; margin-right: 100px;">
+									<img class="w3-image containerr" src="img/NFT.png" alt="">
+								</div>
+								
+						</div><br><br><br><br>
+						<div class="w3-container w3-hide-small w3-half w3-center" style="min-height: 40vh; ">
+							<video class="containerr"  autoplay loop muted src="img/IMG_3989.MP4"></video>
+						</div>
+							<div class="w3-container noice w3-half w3-center" style="margin-top:100px; ">
+								<h1 style="font-size: 50px;">Celebrating NFT artists</h1>
+								<p style="font-size: 30px;">Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
+								Catbread will regularly commission NFT artists from the NFT community to create Breaderines
+									in their own style.
+								</p>
+							</div>
+						
+			
+					</div><br><br><br><br><br><br>
+					<div id="news" class="w3-container"  > <br><br> <h1 style="font-size: 50px;"> NEWS </h1> <br><br>
+					<div class="w3-content w3-center noice" style="display: flex; justify-items: center;">
+						<a style="min-width: 110%;" class="twitter-timeline" data-height="750" href="https://twitter.com/Catbreadbsc?ref_src=twsrc%5Etfw">Tweets by Catbreadbsc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+					<br><br><br><br><br><br><br><br><br>
+				<h1 class="w3-center" >OUR PARTNERS</h1>
+				<br><br><br><br><br>
+
+					<div class="w3-hide-small" style="display: flex; align-items: center; justify-content: center;">
+						<img class="w3-image" style="max-width: 25vw; height: 100px; margin-right: 50px;" src="img/chainlink.png" alt="">
+						<img class="w3-image" style="max-width: 25vw; height: 100px; margin-right: 50px;" src="img/epichero.png" alt="">
+						<img class="w3-image" style="max-width: 25vw ; height: 100px;" src="img/herofi.png" alt="">
+						
+					</div> <br><br><br><br>
+					<div class="w3-hide-medium w3-hide-large" style="display: flex; align-items: center; justify-content: center ; flex-wrap: wrap;">
+						<img class="w3-image" style="max-width: auto; height: 100px; margin-right: 50px;" src="img/chainlink.png" alt="">
+						<img class="w3-image" style="max-width: auto; height: 100px; margin-right: 50px;" src="img/epichero.png" alt="">
+						<img class="w3-image" style="max-width: auto ; height: 100px;" src="img/herofi.png" alt="">
+						
+					</div> <br><br><br><br>
+					<div class="w3-content w3-center w3-hide-small">				
+							<h1 class="w3-center" >Chainlink’s VRF Integration</h1><br><br>
+					<img class="w3-center w3-content noice" src="img/1_Twxr-5-A1gz3Wj98G-3rdA.png" alt=""> 
+<br><br><br> <p> <a style="font-size: 25px; text-decoration: none; color: #afafaf;" class="w3-center"  href="https://medium.com/catbread-official/catbread-will-integrate-chainlink-vrf-to-secure-transparentand-tamper-free-reward-distribution-bea15074bd2b
+"> GO TO MEDIUM ARTICLE </a> </p> <br><br><br><br><br>
+<div class="all w3-container">
+	<div class="lefter">
+	<div class="text">Hosting</div>
+	</div>
+	<div class="left">
+	<div class="text">Web Design</div>
+	</div>
+	<div class="center">
+	<div class="explainer"><span>MORE</span></div>
+	<div class="text">Frontend </div>
+	</div>
+	<div class="right">
+	<div class="text">Backend</div>
+	</div>
+	<div class="righter">
+	<div class="text">SEO</div>
+	</div>
+	</div>
+
+</div> <br><br><br><br><br>
+					</div>
+					<div class=" w3-center w3-hide-medium w3-hide-large">				
+						<h5 class="w3-center" >Chainlink’s VRF Integration</h5><br><br>
+				<img class="w3-center w3-image" style="max-width: 100vw;" src="img/1_Twxr-5-A1gz3Wj98G-3rdA.png" alt=""> 
+<br><br><br> <a style="font-size: 25px; text-decoration: none;" class="w3-center"  href="https://medium.com/catbread-official/catbread-will-integrate-chainlink-vrf-to-secure-transparentand-tamper-free-reward-distribution-bea15074bd2b
+"> GO TO MEDIUM ARTICLE </a>
+
+			
+
 		
-		</section>
+			</section>				
+			</section>
+			</section>
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <script>
+						/* Store the element in el */
+					let el = document.getElementById('tilt')
+
+					/* Get the height and width of the element */
+					const height = el.clientHeight
+					const width = el.clientWidth
+
+					/*
+					* Add a listener for mousemove event
+					* Which will trigger function 'handleMove'
+					* On mousemove
+					*/
+					el.addEventListener('mousemove', handleMove)
+
+					/* Define function a */
+					function handleMove(e) {
+					/*
+						* Get position of mouse cursor
+						* With respect to the element
+						* On mouseover
+						*/
+					/* Store the x position */
+					const xVal = e.layerX
+					/* Store the y position */
+					const yVal = e.layerY
+					
+					/*
+						* Calculate rotation valuee along the Y-axis
+						* Here the multiplier 20 is to
+						* Control the rotation
+						* You can change the value and see the results
+						*/
+					const yRotation = 20 * ((xVal - width / 2) / width)
+					
+					/* Calculate the rotation along the X-axis */
+					const xRotation = -20 * ((yVal - height / 2) / height)
+					
+					/* Generate string for CSS transform property */
+					const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+					
+					/* Apply the calculated transformation */
+					el.style.transform = string
+					}
+
+					/* Add listener for mouseout event, remove the rotation */
+					el.addEventListener('mouseout', function() {
+					el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+					})
+
+					/* Add listener for mousedown event, to simulate click */
+					el.addEventListener('mousedown', function() {
+					el.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+					})
+
+					/* Add listener for mouseup, simulate release of mouse click */
+					el.addEventListener('mouseup', function() {
+					el.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+					})
+					</script>
+			
+			
 					<script>
 					const cursor = document.querySelector('.cursor');
 					document.addEventListener('mousemove', e => {
