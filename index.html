@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 	<script type="text/javascript" src="js/zapp.js"></script>
     <script src = "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -75,38 +76,10 @@
 	margin: 0;
 	padding: 0;
 }
-
-.containerr{
-
-  /*unplash change the image everytime it reloads*/
-  
-  transform:scale(.75) rotateY(-35deg) rotateX(45deg);
-  transform-style:preserve-3d;
-  box-shadow:20px 20px 20px rgba(0,0,0,.25);
-  position:relative;
-  transition:.4s ease;
+p {
+	font-size: 16px;
 }
 
-.containerr::before{
-  content:'';
-
-  border:5px solid red;
-  position:absolute;
-  transform:translateZ(4rem);
-}
-
-
-.containerr:after{
-  content:'';
-
-  position:absolute;
-  background-color:rgb(71, 255, 157);
-  transform:translateZ(-4rem);
-}
-
-.containerr:hover{
-  transform:scale(1);
-}
 .all {
 	 display: flex;
 	 perspective: 10px;
@@ -651,10 +624,11 @@ ul{
   margin:0;
   padding:0;
   display:flex;
-  justify-content: end;
+
   background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(4px);
-  height: 40px;
+  height: 60px;
+  min-width: 100vw;
 }
 .phone{
   margin:0;
@@ -684,12 +658,12 @@ ul li a{
   text-decoration:none;
   padding:5px;
   padding-top: 10px;
-  font-size:18px;
+  font-size:27px;
   font-family: 'Rajdhani', sans-serif;
   font-weight: 200;
   color:#fff;
   text-transform:uppercase;
-  transition:0.7s;
+  transition:0.3s;
 }
 
 ul:hover li a{
@@ -821,8 +795,8 @@ circle {
   stroke-width:31.8309886184;
   stroke-dasharray: 0,0,0,100;
   stroke-dashoffset: 25;
-  -webkit-animation: pie1 3s infinite ease both;
-  animation: pie1 6s infinite ease both;
+  -webkit-animation: pie1 3s ease both;
+  animation: pie1 6s  ease both;
 }
 .pie1 {
   stroke:rgb(23, 182, 182);
@@ -957,9 +931,7 @@ circle {
 <body >					
 		
 			<section style="position: relative; overflow-x: hidden; min-width: 100vw; background-color: #00000000;">	
-				<img style="position: fixed; z-index: -600; 		object-fit: cover;
-				background-attachment: fixed; background-size: 100% 100%;" src="img/cale-bake-hq-2.gif" alt="">	
-	
+			
 					
 					
 					<!-- filters -->
@@ -982,18 +954,19 @@ circle {
 							</filter>
 						</defs>
 					</svg>
-					<li style=" position: fixed;
-						margin: 50px 15px 15px 10px;
-						left: 0; z-index: -1;
-						display:inline;"><img src="img/catbread logo test copy hi rez.png" alt="logo" width="200px"  height="160px"></li>
+				
 					<div class="w3-top w3-hide-small coolbg" data-aos="fade-down"   data-aos-duration="500"  style="z-index: 4;">
 					<ul>
 
 					
-						
-						<li><a href="#team">Team</a></li>
+						<li style="display: flex; justify-content: left; margin-right: 500px; min-height: 40px"><img src="img/animated-text-hd-CB.gif" alt="logo"  ></li>
+						<li  ><a  href="#team">Team</a></li>
 						<li><a href="#tokenomicz">Tokenomics</a></li>
 						<li><a href="#news">News</a></li>
+						<li><a href="#news"><i class="ri-telegram-fill"></i></a></li>
+						<li><a href="#news"> <i class="ri-twitter-fill"></i> </a></li>
+						<li><a href="#news"> <i class="ri-instagram-fill"></i></a></li>
+						<li ><a href="#news"> <i class="ri-discord-fill"></i></a></li>
 								
 					
 					
@@ -1005,33 +978,30 @@ circle {
 					</div>
 			
 					
-					<header class="w3-display-container  w3-wide"  style="z-index: -2; height: 110vh; ">
+					<header class="w3-display-container  w3-wide"  style="z-index: -2; height: 110vh; background-image:url(img/xxx.png),  linear-gradient(rgba(0,0,0,0.5),rgba(157, 0, 126, 0.306));  background-blend-mode: overlay; background-size: 100% 100%; z-index: -2;" >
 						<div data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"  style="z-index: 0; position: absolute;bottom: 0; left: 0; display: flex; float: left; " >
-							<img width="1500px" height="auto" src="img/oven-2.gif"  alt="">
+							<img width="900px" height="auto" src="img/oven-2.gif"  alt="">
 
 						</div>
 						
-						<video style="z-index: -2; height: 110vh;" id="background-video" autoplay loop muted poster="img/coolvid.mp4">
-							<source src="img/vidbg.mp4" type="video/mp4">
-						</video>
 					
-						<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 70px;" >
+						<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 0px;" >
 						
 						<div style="color: #000000; " class="w3-hide-small" data-aos="zoom-in" data-aos-delay="5000" data-aos-duration="1500">
-						<img src="img/animated-text-hd-CB.gif" style="max-width: 100vw;" alt="">
-						</div>
+						<img src="img/catbread logo test copy hi rez.png" style="max-width: 50vw;" alt="">
+						</div></div>
 						<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 15px;" >
 						
-						<div class="w3-hide-medium w3-hide-large" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="2500" style="max-width: 100vw;">
-						<img style="max-width: 80vw;" src="img/animated-text-hd-CB.gif" alt="">
+						<div class="w3-hide-medium w3-hide-large" data-aos="zoom-in" data-aos-delay= "500" data-aos-duration="2500" style="max-width: 100vw;">
+						<img style="max-width: 50vw;" src="img/animated-text-hd-CB.gif" alt="">
 
 							
 						</div>
 					
-						<div class="w3-padding-32 w3-content w3-display-middle" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500" ;>
+						<div class="w3-padding-32 w3-content w3-display-middle" data-aos="zoom-in" data-aos-delay= "500" data-aos-duration="500" ;>
 						<div  class="noice w3-padding-32 w3-content w3-display-middle w3-large w3-center w3-text-white w3-hide-small" style=" background-color: rgba(251, 255, 0, 0.716);
-						backdrop-filter: blur(3px); margin-top: 400px; position: absolute; " >
-							<p class="w3-content" style="width: 800px; font-size: 20px; color: #000000;"> <strong>Catbread is a retro P2E arcade powered by NFTs. Simplicity and nostalgia meet the
+						backdrop-filter: blur(3px); margin-top: 70vh; position: absolute; " >
+							<p class="w3-content" style="width: 800px; font-size: 16px; color: #000000;"> <strong>Catbread is a retro P2E arcade powered by NFTs. Simplicity and nostalgia meet the
 								digital revolution to create a project that’s not only fun, but lucrative.</strong> 
 								 </p>
 						</div><br><br>	<div  class="w3-padding-32 w3-content w3-display-middle w3-large w3-center w3-text-white w3-hide-medium w3-hide-large" style=" background-color: rgba(0, 0, 0, 0.716);
@@ -1054,15 +1024,17 @@ circle {
 					
 
 					</header>
-<section class="coolbg">					
-					<div  id="aboutz" style=" min-height: 50vh;  " >
-						<div class="w3-container   w3-center " style="margin: 0 8%; " ><br><br>
-							<br><br><br>
-							<h3 class=" w3-content w3-center w3-border-black w3-padding-32 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="500" style="font-family: 'Press Start 2P', cursive;">OUR VISION</h3><br><br><br><br>
+<section style="background-image: url(img/super\ grid\ 2.png),  linear-gradient(rgba(157, 0, 126, 0.306),rgba(0,0,0,0.5));  background-blend-mode: overlay; background-size: 100% 100%; z-index: -2;">					
+					<div  id="aboutz" >
+						<div class="w3-container ">
+							
+						<div class=" w3-half   w3-center " style="margin: 0 8%; " ><br><br>
+							<br>
+							<h3 class=" w3-content w3-center w3-border-black w3-padding-32 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="500" style="font-family: 'Press Start 2P', cursive;">OUR VISION</h3><br>
 							
 							
 
-							<p class="w3-xlarge w3-center noice w3-hide-small w3-text-light-grey w3-padding-32" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="500" style=" padding-left: 24px; padding-right: 30px; border-radius: 10px;">Catbread aims to be the go to for players interested in casual gaming that focuses on
+							<p class="  w3-center noice w3-hide-small w3-text-light-grey w3-padding-32" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="500" style=" padding-left: 24px; padding-right: 30px; border-radius: 10px; z-index: 7;">Catbread aims to be the go to for players interested in casual gaming that focuses on
 							gameplay and community above all else. To do this, we’re creating an arcade that integrates
 							upgradeable NFTs, leveling, weekly competitions, staking, and an ever expanding collection of
 							virtual arcade cabinets.
@@ -1071,8 +1043,30 @@ circle {
 							Catbread from classic token staking. You can even earn BUSD via a portion of the royalties from
 							NFT sales by staking your unused NFTs.
 							</p><br><br><br><br><br><br>
+						
 							</div>
-							<p class="w3-xlarge w3-center w3-hide-medium w3-hide-large w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="500" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%); width: 100vw;
+							<div style="padding: 30px; margin-top: 40vh;" >
+								<div class="button-container-2 w3-hide-small" data-aos="fade-down"
+								data-aos-delay= "500"
+								data-aos-duration="500">
+								  <span  class="mas">BUY TOKEN</span>
+								  <button id="connz" type="button" name="Hover">BUY TOKEN</button>
+								</div><br><br><br>
+								<div class="button-container-2 w3-hide-small" data-aos="fade-down"
+								data-aos-delay= "500"
+								data-aos-duration="500">
+								  <span  class="mas">CONTRACT</span>
+								  <button id="connz" type="button" name="Hover">CONTRACT</button>
+								</div>
+						
+	
+							</div>
+							<div  style="  position: relative; margin-top: -900px; ; " >
+								<img style="min-width: 100vw;" src="img/lorry.gif" alt="">
+							</div>
+						</div>
+					
+							<p class="  w3-center w3-hide-medium w3-hide-large w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="500" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%); width: 100vw;
 							backdrop-filter: blur(5px); padding-left: 24px; padding-right: 24px; border-radius: 10px;">Catbread aims to be the go to for players interested in casual gaming that focuses on
 							gameplay and community above all else. To do this, we’re creating an arcade that integrates
 							upgradeable NFTs, leveling, weekly competitions, staking, and an ever expanding collection of
@@ -1083,24 +1077,23 @@ circle {
 							NFT sales by staking your unused NFTs.
 							</p>
 							</div>
-						
+						</div>
 					</div>
-					<div  style="margin-top: -450px;" >
-						<img style="min-width: 100vw;" src="img/lorry.gif" alt="">
-					</div>
+				
 					</div>
 
 
 				
 				
 					<div  style=" min-width: 100vw;" >
+						
 						<div class=" w3-hide-medium w3-hide-large  w3-center "  ><br><br>
 							
 							<h3 class=" w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white " data-aos="zoom-out-down" data-aos-duration="500" style="font-family: 'Press Start 2P', cursive;">TEAM PROMISE</h3><br><br><br><br>
 							
 							
 
-							<p class="w3-xlarge w3-center w3-text-light-grey " data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="500" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
+							<p class="  w3-center w3-text-light-grey " data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="500" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
 							backdrop-filter: blur(5px); padding-left: 24px; padding-right: 24px; border-radius: 10px;">There aren’t any fat dev wallets here. The team has a publicly available wallet with 7% -
 that’s 1% per core team member locked for six months and paid out over another two after that.
 Catbread’s philosophy has always been to make it with our community, not to feed off of them
@@ -1121,13 +1114,15 @@ our holders do - through the tax on token transactions and the royalties from NF
 							
 							</p>
 							</div>
-							<div class="w3-container w3-hide-small   w3-center " style="margin-top: -240px;" ><br><br>
+							<div class="w3-container w3-hide-small w3-center w3-padding-64" style="margin-top: -240px;" ><br><br>
+							
 								<br><br><br>
+							<div class="w3-twothird" style="margin: 0 8%; float: right;">
 								<h3 class=" w3-content w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="500" style="font-family: 'Press Start 2P', cursive;">THE CATBREAD'S TEAM PROMISE</h3><br><br><br><br>
 								
 								
 	
-								<p class="w3-xlarge w3-center w3-content noice w3-text-light-grey w3-padding-32" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="500" style=" padding-left: 24px; padding-right: 30px; border-radius: 10px;">There aren’t any fat dev wallets here. The team has a publicly available wallet with 7% -
+								<p class="  w3-center w3-content noice w3-text-light-grey w3-padding-32" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="500" style=" padding-left: 24px; padding-right: 30px; border-radius: 10px;">There aren’t any fat dev wallets here. The team has a publicly available wallet with 7% -
 	that’s 1% per core team member locked for six months and paid out over another two after that.
 	Catbread’s philosophy has always been to make it with our community, not to feed off of them
 	like many of the projects out there. We earn our funding for marketing and development just as
@@ -1146,45 +1141,45 @@ our holders do - through the tax on token transactions and the royalties from NF
 	
 								
 								</p>
-								</div>
+							</div>	</div>
 						<br><br><br><br><br><br>
 					</div>
 					</div>
 			
 					<div style="border-bottom: solid 2px rgba(255, 255, 255, 0.178)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div>
 </section>				
-		     	<div class="w3-container w3-center" style="min-height: 110vh;">
-					
-					<h1 data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="500" id="team" style="color: #000000;">MEET THE TEAM</h1>
+		     	<div class="w3-container w3-center" style="background-image: url(img/super\ grid\ 2.png),  linear-gradient(rgba(0,0,0,0.5), rgba(157, 0, 126, 0.306));  background-blend-mode: overlay; background-size: 100% 100%; z-index: -2;">
+					<br><br><br><br>
+					<h1 data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="500" id="team" ">MEET THE TEAM</h1>
 					
 					<br><br><br><br><br><br>
 					  <div class="box-model" >
-						<div data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" class="box no1">
+						<div data-aos="fade-down" data-aos-delay="500" data-aos-duration="500" class="box no2">
 						  <img src="img/5.jpg" alt="" />
 						  <h2>Mercurial  
 						</h2>
 						  <p>Head editor, co - owner, theory crafter, and director.</p>
 						</div>
-						<div data-aos="fade-down" data-aos-delay="1000" data-aos-duration="500" class="box no2">
+						<div data-aos="fade-down" data-aos-delay= "500" data-aos-duration="500" class="box no2">
 						  <img src="img/2.jpg" alt="" />
 						  <h2>Joshua  </h2>
 						  <p>Director of art, co - owner, and animation.</p>
 						</div>
-						<div data-aos="fade-left" data-aos-delay="1500" data-aos-duration="500" class="box no3">
+						<div data-aos="fade-down" data-aos-delay="500" data-aos-duration="500" class="box no2">
 						  <img src="img/3.jpg" alt="" />
 						  <h2>Hossam “SEXUAL!“ Barly 
 						</h2>
 						  <p> Head of web development.</p>
 						</div>
-						<div data-aos="fade-left" data-aos-delay="2000" data-aos-duration="500" class="box no4">
+						<div data-aos="fade-down" data-aos-delay="500" data-aos-duration="500" class="box no2">
 						  <img src="img/3.jpg" alt="" />
 						  <h2>Bee </h2>
 						  <p> UI/UX, Critic, and Treasurer</p>
 						</div>
-						<div data-aos="fade-up" data-aos-delay="2500" data-aos-duration="500" class="box no4">
+						<div data-aos="fade-down" data-aos-delay="500" data-aos-duration="500" class="box no2">
 							<img src="img/1.jpg" alt="" />
 							<h2>Zee </h2>
-							<p style="color: wheat;"> NFT Connoisseur, smart contract developer, and Co - owner</p>
+							<p > NFT Connoisseur, smart contract developer, and Co - owner</p>
 						  </div>
 					</div>
 				</div>		
@@ -1193,10 +1188,10 @@ our holders do - through the tax on token transactions and the royalties from NF
 					
 					
 					
-	<section class="coolbg">	<br><br><br><br><br>		
+	<section style="background-image: url(img/super\ grid\ copy.png),  linear-gradient(rgba(0,0,0,0.5),rgba(139, 0, 151, 0.395));  background-blend-mode: overlay; background-size: 100% 100%; z-index: -2;">	<br><br><br><br><br>		
 					<div class="w3-container" style="min-height: 130vh; " id="roadmap">
 						<h1 id="tokenomicz" data-aos="zoom-in"  data-aos-duration="500" class="w3-center " >THE TOKEN</h1><br><br><br>
-						<P data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" class="w3-center w3-xlarge">TOTAL TOKEN SUPPLY - 100,000,000,000 </P><br><br><br><br><br><br><br>
+						<P data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration= "500" class="w3-center  ">TOTAL TOKEN SUPPLY - 100,000,000,000 </P><br><br><br><br><br><br><br>
 						<figure data-aos="fade-left" data-aos-duration="500" class="w3-hide-small" style="background-color: #00000000;">
 								
 								
@@ -1237,7 +1232,7 @@ our holders do - through the tax on token transactions and the royalties from NF
 						
 					
 					
-					<div data-aos="fade-right" data-aos-delay="1500" data-aos-duration="500" class="w3-half w3-hide-small w3-padding-32" style=" border-radius: 10px; background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%); display: block;align-content: center;" >
+					<div data-aos="fade-right" data-aos-delay="1500" data-aos-duration="500" class="w3-half w3-hide-small w3-padding noice" style=" display: block;align-content: center; margin-right: 10px; margin-left: 20px;" >
 						<p style="font-size: 20px;"> <svg width="100" height="50">
 							<rect x="50" y="20" width="50" height="50"
 							style="fill:rgb(23, 182, 182);opacity:1; position: relative;" />
@@ -1327,34 +1322,36 @@ our holders do - through the tax on token transactions and the royalties from NF
 					A 10% tax continually increases price stability and ensures continued marketing and
 					development.
 				</p><br><br><br>
-						<div data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" class="w3-center noice w3-content w3-padding-64" style="font-size: 40px; ">
+						<div data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" class="w3-center noice w3-content w3-padding-64" style="font-size: 40px; margin : 0 30% ; ">
 							<p>5% - Liquidity <br>
 								5% - Marketing and Development
 
 							</p>
-						</div>
-<br><br><br><br><br>
-					<div>
-						<img style="min-width: 100vw; margin-top: -300px;" src="img/xray-1A.gif" alt="">
+						</div><br><br><br><br><br><br>
+</section>						
+
+					
+<section style="background-image: url(img/super\ grid\ 2.png),  linear-gradient(rgba(157, 0, 126, 0.306),rgba(60, 0, 100, 0.5));  background-blend-mode: overlay; background-size: 100% 100%; z-index: -2;" >			<div>
+	<img style="min-width: 100vw; margin-top: -300px;" src="img/xray-1A.gif" alt="">
+</div>		
 					</div>
-					</div>
-					<div class="w3-container" style="margin-top: -200px;">					
-							<div data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" class="w3-container  w3-padding-32 noice w3-half w3-center ">
-								<h1 style="font-size: 50px;">THE CASINO</h1>
-								<p style="font-size: 30px;">Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
+					<div class="w3-container" style="margin-top: -200px; margin-left: 8%; margin-right: 8%;">					
+							<div data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" class="w3-container  w3-padding noice w3-half w3-center ">
+								<h1 style="  font-size: 35px;">THE CASINO</h1>
+								<p  >Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
 									Play roulette to win big, or have fun using our gashapon to win special NFTs and tokens <br>A portion of casino earnings are sent to those staking tokens.
 								</p>
 							</div>
-							<div data-aos="fade-left" data-aos-delay="1000" data-aos-duration="500" class="w3-container w3-half w3-center">
-								<img class="w3-image containerr" src="img/cat-truck-nu.gif" alt="">
+							<div data-aos="fade-left" data-aos-delay= "500" data-aos-duration="500" class="w3-container w3-half w3-center">
+								<img class="w3-image  " src="img/cat-truck-nu.gif" alt="">
 							</div>
 						<div class="w3-container"><br><br><br><br>
 							<div data-aos="fade-right" data-aos-delay="1500" data-aos-duration="500" class="w3-container w3-hide-small w3-half w3-center" style="max-width: 40vw;">
-								<img class="w3-image containerr"  src="img/Arcade-Machine-PNG-Picture.png" alt="">
+								<img class="w3-image  "  src="img/Arcade-Machine-PNG-Picture.png" alt="">
 							</div>
 							<div data-aos="fade-left" data-aos-delay="500" data-aos-duration="500" class="w3-container w3-half w3-center noice  w3-padding-32" style="margin-top: 100px; display: block; float: right;">
-								<h1 style="font-size: 50px;">THE ARCADE</h1>
-								<p style="font-size: 30px;">Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
+								<h1 style="  font-size: 35px;">THE ARCADE</h1>
+								<p  >Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
 									NFTs to hundreds of dollars.
 									
 								</p>
@@ -1362,26 +1359,26 @@ our holders do - through the tax on token transactions and the royalties from NF
 						</div><br><br><br><br>
 						<div class="w3-container ">
 							<div data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" class="w3-container noice w3-half w3-center" style="padding-top: 50px ; align-items: center;">
-								<h1 style="font-size: 50px;">NFTs</h1>
-								<p style="font-size: 30px;">Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
+								<h1 style="  font-size: 35px;">NFTs</h1>
+								<p  >Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
 									Include a cool graphic of our nfts.
 									Like the animated ones you see cycling through different NFTS Upgradable NFTs and royalties provide reflections to all NFT holders and a deflationary
 									mechanism.
 									
 								</p>
 							</div>
-							<div data-aos="fade-left" data-aos-delay="1000" data-aos-duration="500" class="w3-container w3-hide-small w3-half w3-center" >
-								<video class="containerr"  autoplay loop muted src="img/IMG_3989.MP4"></video>
+							<div data-aos="fade-left" data-aos-delay= "500" data-aos-duration="500" class="w3-container w3-hide-small w3-half w3-center" >
+								<video  style="max-width: 30vw; margin-left: 6%;" autoplay loop muted src="img/IMG_3989.MP4"></video>
 							</div>
 								
 						</div><br><br><br><br>
 						<div class="w3-container ">
-							<div data-aos="fade-right" data-aos-delay="1000" data-aos-duration="500" class="w3-container  w3-center" style="max-width: 40vw; display: block; float:left; ">
-								<img class="w3-image containerr" src="img/nftee.gif" alt="">
+							<div data-aos="fade-right" data-aos-delay= "500" data-aos-duration="500" class="  w3-center" style=" display: block; float:left; max-width: 30vw;">
+								<img class="w3-image  " src="img/nftee.gif" alt="">
 							</div>
 							<div data-aos="fade-left" data-aos-delay="500" data-aos-duration="500" class="w3-container noice w3-half w3-center " style="display: block; float: right;">
-								<h1 style="font-size: 50px;">Celebrating NFT artists</h1>
-								<p style="font-size: 30px;">Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
+								<h1 style="  font-size: 35px;">Celebrating NFT artists</h1>
+								<p  >Play in the arcade against others to win daily, weekly, and monthly prizes ranging from special
 								Catbread will regularly commission NFT artists from the NFT community to create Breaderines
 									in their own style.
 								</p>
@@ -1389,23 +1386,22 @@ our holders do - through the tax on token transactions and the royalties from NF
 						
 						</div>
 					</div><br><br><br><br><br><br>
-					<div id="news" class="w3-container"  > <br><br> <h1 data-aos="zoom-out-down" data-aos-delay="500" data-aos-duration="500" style="font-size: 30px;"> NEWS </h1> <br><br>
-					<div data-aos="zoom-in-up" data-aos-delay="1000" data-aos-duration="500" class="w3-content w3-center " style="display: flex; justify-items: center;">
+</section>	
+<section  style="background-image: url(img/super\ grid\ 2.png),  linear-gradient(rgba(138, 0, 151, 0.581),rgba(213, 0, 246, 0.5));  background-blend-mode: overlay; background-size: 100% 100%; z-index: -2;" >				
+					<div id="news" class="w3-container"  > <br><br> <h1 data-aos="zoom-out-down" data-aos-delay="500" data-aos-duration="500"  > NEWS </h1> <br><br>
+					<div data-aos="zoom-in-up" data-aos-delay= "500" data-aos-duration="500" class="w3-content w3-center " style="display: flex; justify-items: center;">
 						<a  class="twitter-timeline" data-height="550" href="https://twitter.com/Catbreadbsc?ref_src=twsrc%5Etfw">Tweets by Catbreadbsc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
 					<br><br>
 			       	</div><br><br><br><br>
-					   <div data-aos="fade-up" data-aos-delay="1500" data-aos-duration="500" class="w3-center w3-content" >
-						<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinPriceBlock.js"></script><div id="coinmarketcap-widget-coin-price-block" coins="1839,10887,1027,18876,74,5994,1" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
-					</div>
-					<br><br><br><br><br><br><br>
+				
 					<br><br><br><br><br><br><br>
 				<h1  data-aos="fade-down" data-aos-delay="500" data-aos-duration="500" class="w3-center" >OUR PARTNERS</h1>
 				<br><br><br><br><br>
 
 					<div class="w3-hide-small" style="display: flex; align-items: center; justify-content: center;">
 						<img data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" class="w3-image" style="max-width: 25vw; height: 100px; margin-right: 50px;" src="img/chainlink.png" alt="">
-						<img  data-aos="fade-down" data-aos-delay="1000" data-aos-duration="500" class="w3-image" style="max-width: 25vw; height: 100px; margin-right: 50px;" src="img/epichero.png" alt="">
+						<img  data-aos="fade-down" data-aos-delay= "500" data-aos-duration="500" class="w3-image" style="max-width: 25vw; height: 100px; margin-right: 50px;" src="img/epichero.png" alt="">
 						<img data-aos="fade-left" data-aos-delay="1500" data-aos-duration="500" class="w3-image" style="max-width: 25vw ; height: 100px;" src="img/herofi.png" alt="">
 						
 					</div> <br><br><br><br>
@@ -1417,7 +1413,7 @@ our holders do - through the tax on token transactions and the royalties from NF
 					</div> <br><br><br><br>
 					<div class="w3-content w3-center w3-hide-small">				
 							<h1  data-aos="fade-down" data-aos-delay="500" data-aos-duration="500" class="w3-center" >Chainlink’s VRF Integration</h1><br><br>
-					<img  data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1500" class="w3-center w3-content noice" src="img/1_Twxr-5-A1gz3Wj98G-3rdA.png" alt=""> 
+					<img  data-aos="zoom-in" data-aos-delay= "500" data-aos-duration="1500" class="w3-center w3-content noice" src="img/1_Twxr-5-A1gz3Wj98G-3rdA.png" alt=""> 
 <br><br><br> <p> <a style="font-size: 25px; text-decoration: none; color: #afafaf;" class="w3-center"  href="https://medium.com/catbread-official/catbread-will-integrate-chainlink-vrf-to-secure-transparentand-tamper-free-reward-distribution-bea15074bd2b
 "> GO TO MEDIUM ARTICLE </a> </p> <br><br><br><br><br>
 <div class="all w3-container">
